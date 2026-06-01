@@ -1,23 +1,24 @@
-# Titanic Data Cleaning & Preprocessing
+# Titanic Dataset EDA
 
 ## Objective
-Learn how to clean and preprocess data for Machine Learning.
+Perform Exploratory Data Analysis (EDA) using Python.
 
 ## Tools Used
-- Python
 - Pandas
-- NumPy
 - Matplotlib
 - Seaborn
-- Scikit-Learn
 
 ## Tasks Performed
-- Data exploration
-- Missing value handling
-- Encoding categorical variables
-- Feature scaling
-- Outlier detection
-- Outlier removal
+- Data Cleaning
+- Summary Statistics
+- Histograms
+- Boxplots
+- Correlation Matrix
+- Pairplot
+- Survival Analysis
 
-## Output
-Cleaned Titanic dataset ready for Machine Learning.
+## Key Findings
+1. Females survived more than males.
+2. First-class passengers had better survival chances.
+3. Fare contains outliers.
+4. Missing values exist in Age and Cabin columns.
