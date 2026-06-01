@@ -1,4 +1,4 @@
-# Titanic Dataset EDA
+# Coronary_Artery_Disease EDA
 
 ## Objective
 Perform Exploratory Data Analysis (EDA) using Python.
