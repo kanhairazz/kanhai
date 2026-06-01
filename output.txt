@@ -1,0 +1,30 @@
+==================================================
+DATASET SHAPE
+(303, 55)
+
+==================================================
+COLUMN NAMES
+['Age', 'Weight', 'Length', 'Sex', 'BMI', 'DM', 'HTN', 'Current Smoker', 'EX-Smoker', 'FH', 'Obesity', 'CRF', 'CVA', 'Airway disease', 'Thyroid Disease', 'CHF', 'DLP', 'BP', 'PR', 'Edema', 'Weak Peripheral Pulse', 'Lung rales', 'Systolic Murmur', 'Diastolic Murmur', 'Typical Chest Pain', 'Dyspnea', 'Function Class', 'Atypical', 'Nonanginal', 'Exertional CP', 'LowTH Ang', 'Q Wave', 'St Elevation', 'St Depression', 'Tinversion', 'LVH', 'Poor R Progression', 'FBS', 'CR', 'TG', 'LDL', 'HDL', 'BUN', 'ESR', 'HB', 'K', 'Na', 'WBC', 'Lymph', 'Neut', 'PLT', 'EF-TTE', 'Region RWMA', 'VHD', 'Cath']
+
+==================================================
+DATASET INFO
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 303 entries, 0 to 302
+Data columns (total 55 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   Age                    303 non-null    int64  
+ 1   Weight                 303 non-null    int64  
+ 2   Length                 303 non-null    int64  
+ 3   Sex                    303 non-null    object 
+ 4   BMI                    303 non-null    float64
+ 5   DM                     303 non-null    int64  
+ 6   HTN                    303 non-null    int64  
+ 7   Current Smoker         303 non-null    int64  
+ 8   EX-Smoker              303 non-null    int64  
+ 9   FH                     303 non-null    int64  
+...
+       'Function Class', 'Q Wave', 'St Elevation', 'St Depression',
+       'Tinversion', 'FBS', 'CR', 'TG', 'LDL', 'HDL', 'BUN', 'ESR', 'HB', 'K',
+       'Na', 'WBC', 'Lymph', 'Neut', 'PLT', 'EF-TTE', 'Region RWMA'],
+      dtype='object')
