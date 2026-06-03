@@ -1,24 +1,30 @@
-# Coronary_Artery_Disease EDA
+# Task 3 - Linear Regression
 
 ## Objective
-Perform Exploratory Data Analysis (EDA) using Python.
+Implement and understand Simple and Multiple Linear Regression.
 
 ## Tools Used
+- Python
 - Pandas
+- Scikit-Learn
 - Matplotlib
-- Seaborn
 
-## Tasks Performed
-- Data Cleaning
-- Summary Statistics
-- Histograms
-- Boxplots
-- Correlation Matrix
-- Pairplot
-- Survival Analysis
+## Steps Performed
+1. Loaded dataset.
+2. Performed preprocessing.
+3. Split data into training and testing sets.
+4. Trained Linear Regression model.
+5. Evaluated using:
+   - MAE
+   - MSE
+   - R² Score
+6. Interpreted coefficients.
+7. Visualized regression line.
 
-## Key Findings
-1. Females survived more than males.
-2. First-class passengers had better survival chances.
-3. Fare contains outliers.
-4. Missing values exist in Age and Cabin columns.
+## Results
+- MAE = ...
+- MSE = ...
+- R² Score = ...
+
+## Conclusion
+The model predicts house prices using multiple features and achieves good accuracy based on the R² score.
