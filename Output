@@ -1,31 +1,26 @@
-First 5 Rows:
-    Price  Bedrooms  Bathrooms  SquareFeet  YearBuilt  GarageSpaces  LotSize  \
-0  221958         1        1.9        4827       1979             2     1.45   
-1  771155         2        2.0        1035       1987             2     1.75   
-2  231932         1        3.0        2769       1982             1     1.46   
-3  465838         3        3.3        2708       1907             3     1.62   
-4  359178         4        3.4        1175       1994             2     0.74   
+Decision Tree Accuracy: 0.8439024390243902
+              precision    recall  f1-score   support
 
-   ZipCode  CrimeRate  SchoolRating  
-0    82240      48.60             5  
-1    74315      92.03             9  
-2    79249      52.08             3  
-3    80587      61.65             1  
-4    20756      15.66             4  
+           0       0.94      0.74      0.82       102
+           1       0.78      0.95      0.86       103
 
-Dataset Info:
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 300 entries, 0 to 299
-Data columns (total 10 columns):
- #   Column        Non-Null Count  Dtype  
----  ------        --------------  -----  
- 0   Price         300 non-null    int64  
- 1   Bedrooms      300 non-null    int64  
- 2   Bathrooms     300 non-null    float64
- 3   SquareFeet    300 non-null    int64  
-...
-7     CrimeRate   -42.761472
-8  SchoolRating -1325.098389
+    accuracy                           0.84       205
+   macro avg       0.86      0.84      0.84       205
 
-Intercept: 729122.8560829827
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Random Forest Accuracy: 0.9853658536585366
+     Feature  Importance
+2         cp    0.135072
+11        ca    0.127327
+7    thalach    0.122169
+9    oldpeak    0.121905
+12      thal    0.110518
+0        age    0.077908
+4       chol    0.074822
+3   trestbps    0.071171
+8      exang    0.057594
+10     slope    0.045782
+1        sex    0.028731
+6    restecg    0.018557
+5        fbs    0.008444
+Decision Tree CV Accuracy: 0.8907317073170733
+Random Forest CV Accuracy: 0.9970731707317073
