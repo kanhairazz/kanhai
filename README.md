@@ -1,30 +1,34 @@
-# Task 3 - Linear Regression
+# Task 5 - Decision Trees and Random Forests
 
 ## Objective
-Implement and understand Simple and Multiple Linear Regression.
+Learn tree-based machine learning models for classification.
 
-## Tools Used
-- Python
+## Dataset
+Heart Disease Dataset
+
+## Algorithms Used
+- Decision Tree Classifier
+- Random Forest Classifier
+
+## Libraries
 - Pandas
-- Scikit-Learn
+- Scikit-learn
 - Matplotlib
 
 ## Steps Performed
-1. Loaded dataset.
-2. Performed preprocessing.
-3. Split data into training and testing sets.
-4. Trained Linear Regression model.
-5. Evaluated using:
-   - MAE
-   - MSE
-   - R² Score
-6. Interpreted coefficients.
-7. Visualized regression line.
+1. Loaded dataset
+2. Split data into training and testing sets
+3. Trained Decision Tree
+4. Controlled overfitting using max_depth
+5. Trained Random Forest
+6. Compared accuracies
+7. Analyzed feature importance
+8. Performed cross-validation
 
 ## Results
-- MAE = ...
-- MSE = ...
-- R² Score = ...
+- Decision Tree Accuracy: 84.39%
+- Random Forest Accuracy: 98.54%
+- Random Forest CV Accuracy: 99.71%
 
 ## Conclusion
-The model predicts house prices using multiple features and achieves good accuracy based on the R² score.
+Random Forest achieved the highest accuracy and generalized better than a single Decision Tree.
