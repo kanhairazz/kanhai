@@ -1,30 +1,29 @@
-# Task 3 - Linear Regression
+# K-Nearest Neighbors (KNN) Classification
 
 ## Objective
-Implement and understand Simple and Multiple Linear Regression.
+Implement KNN classification using Scikit-Learn and evaluate model performance.
 
 ## Tools Used
 - Python
 - Pandas
-- Scikit-Learn
+- NumPy
 - Matplotlib
+- Scikit-Learn
+
+## Dataset
+Iris Dataset
 
 ## Steps Performed
-1. Loaded dataset.
-2. Performed preprocessing.
-3. Split data into training and testing sets.
-4. Trained Linear Regression model.
+1. Loaded Iris Dataset
+2. Split data into training and testing sets
+3. Normalized features using StandardScaler
+4. Trained KNN classifier
 5. Evaluated using:
-   - MAE
-   - MSE
-   - R² Score
-6. Interpreted coefficients.
-7. Visualized regression line.
+   - Accuracy
+   - Confusion Matrix
+   - Classification Report
+6. Tested multiple K values
+7. Visualized K vs Accuracy graph
 
-## Results
-- MAE = ...
-- MSE = ...
-- R² Score = ...
-
-## Conclusion
-The model predicts house prices using multiple features and achieves good accuracy based on the R² score.
+## Result
+KNN achieved high classification accuracy on the Iris dataset.
