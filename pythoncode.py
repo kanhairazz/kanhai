@@ -1,70 +1,119 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
+from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
+# ==========================
 # Load Dataset
-df = pd.read_csv("housing_price_dataset.csv")
+# ==========================
 
-# Display first rows
-print("First 5 Rows:")
-print(df.head())
+iris = load_iris()
 
-# Dataset Information
-print("\nDataset Info:")
-print(df.info())
+X = iris.data
+y = iris.target
 
-# Missing Values
-print("\nMissing Values:")
-print(df.isnull().sum())
+print("Dataset Shape:", X.shape)
+print("Target Shape:", y.shape)
 
-# Features and Target
-X = df.drop("Price", axis=1)
-y = df["Price"]
-
+# ==========================
 # Train-Test Split
+# ==========================
+
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y,
+    X,
+    y,
     test_size=0.2,
     random_state=42
 )
 
-# Create Model
-model = LinearRegression()
+# ==========================
+# Feature Scaling
+# ==========================
 
-# Train Model
-model.fit(X_train, y_train)
+scaler = StandardScaler()
 
-# Predictions
-y_pred = model.predict(X_test)
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
+# ==========================
+# KNN Model
+# ==========================
+
+k = 3
+
+knn = KNeighborsClassifier(n_neighbors=k)
+
+knn.fit(X_train, y_train)
+
+# ==========================
+# Prediction
+# ==========================
+
+y_pred = knn.predict(X_test)
+
+# ==========================
 # Evaluation
-mae = mean_absolute_error(y_test, y_pred)
-mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+# ==========================
 
-print("\n===== MODEL PERFORMANCE =====")
-print("MAE :", mae)
-print("MSE :", mse)
-print("R² Score :", r2)
+accuracy = accuracy_score(y_test, y_pred)
 
-# Coefficients
-coef_df = pd.DataFrame({
-    "Feature": X.columns,
-    "Coefficient": model.coef_
-})
+print("\nAccuracy:", accuracy)
 
-print("\nFeature Coefficients:")
-print(coef_df)
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
 
-print("\nIntercept:", model.intercept_)
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
 
-# Actual vs Predicted Plot
-plt.figure(figsize=(8,6))
-plt.scatter(y_test, y_pred)
-plt.xlabel("Actual Price")
-plt.ylabel("Predicted Price")
-plt.title("Actual vs Predicted House Prices")
+# ==========================
+# Experiment with K Values
+# ==========================
+
+k_values = range(1, 21)
+
+accuracy_scores = []
+
+for k in k_values:
+
+    model = KNeighborsClassifier(n_neighbors=k)
+
+    model.fit(X_train, y_train)
+
+    pred = model.predict(X_test)
+
+    score = accuracy_score(y_test, pred)
+
+    accuracy_scores.append(score)
+
+# ==========================
+# Best K Value
+# ==========================
+
+best_k = k_values[np.argmax(accuracy_scores)]
+
+print("\nBest K:", best_k)
+print("Best Accuracy:", max(accuracy_scores))
+
+# ==========================
+# Plot K vs Accuracy
+# ==========================
+
+plt.figure(figsize=(8,5))
+
+plt.plot(
+    k_values,
+    accuracy_scores,
+    marker='o'
+)
+
+plt.title("K Value vs Accuracy")
+plt.xlabel("K Value")
+plt.ylabel("Accuracy")
+plt.grid(True)
+
 plt.show()
