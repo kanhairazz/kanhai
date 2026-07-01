@@ -236,9 +236,9 @@ B.Tech Computer Science Engineering (AI & ML)
 
 Maharishi Markandeshwar (Deemed to be University)
 
-GitHub: https://github.com/YourUsername
+GitHub: https://github.com/kanhairazz/kanhai
 
-LinkedIn: https://linkedin.com/in/YourUsername
+LinkedIn: https://linkedin.com/in/www.linkedin.com/in/kanhai-kumar-1b94b3320
 
 ---
 
